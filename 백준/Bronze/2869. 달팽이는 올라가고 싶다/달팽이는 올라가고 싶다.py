@@ -1,6 +1,8 @@
-import math
-
 A, B, V = map(int, input().split())
-
-days = (V - B) / (A - B) 
-print(math.ceil(days)) 
+climb = (V-A)//(A-B)
+climbing = (V-B)%(A-B)
+if climbing == 0:
+    days = climb +1
+else:
+    days = climb +2
+print(days)
