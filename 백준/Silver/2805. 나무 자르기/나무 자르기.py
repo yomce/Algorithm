@@ -6,7 +6,11 @@ trees = list(map(int, input().split()))
 # trees.sort()  # 있어도 되고 없어도 됨
 
 def get_cut_sum(trees, h):
-    return sum((tree - h) for tree in trees if tree > h)
+    total = 0
+    for tree in trees:
+        if tree > h:
+            total += (tree - h)
+    return total
 
 def binary_search(trees, target):
     left = 0
